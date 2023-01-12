@@ -38,23 +38,32 @@
     [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
                                 moduleName: @"RNSuperModule"
                          initialProperties:
-     @{
-        @"scores" : @[
-            @{
-                @"name" : @"Alex",
-                @"value": @"42"
-            },
-            @{
-                @"name" : @"Joel",
-                @"value": @"10"
-            }
-        ]
-    }
-                             launchOptions: nil];
+                             @{
+                                @"scores" : @[
+                                    @{
+                                        @"name" : @"Alex",
+                                        @"value": @"42"
+                                    },
+                                    @{
+                                        @"name" : @"Joel",
+                                        @"value": @"10"
+                                    }
+                                ]
+                            }
+                         launchOptions: nil];
+    
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view = rootView;
-    vc.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:vc animated:YES completion:nil];
+    vc.navigationItem.title = @"RN View (title from native)";
+    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissModal)];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
+
+- (void)dismissModal
+{
+    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 @end
