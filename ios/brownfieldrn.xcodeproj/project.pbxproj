@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FD38043CAABBD15FB56CD64 /* libPods-brownfieldrn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A234A4CC09B68C1DA17269DA /* libPods-brownfieldrn.a */; };
 		65D1B2582970580500DC3BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B2572970580500DC3BA0 /* AppDelegate.m */; };
 		65D1B25B2970580500DC3BA0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25A2970580500DC3BA0 /* SceneDelegate.m */; };
 		65D1B25E2970580500DC3BA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25D2970580500DC3BA0 /* ViewController.m */; };
@@ -29,6 +30,9 @@
 		65D1B2652970580500DC3BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65D1B2672970580500DC3BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D1B2682970580500DC3BA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75BD1E85CE6A04004C8ACD0B /* Pods-brownfieldrn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brownfieldrn.debug.xcconfig"; path = "Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn.debug.xcconfig"; sourceTree = "<group>"; };
+		A234A4CC09B68C1DA17269DA /* libPods-brownfieldrn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-brownfieldrn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E109402DC41E8DD5BD177AE6 /* Pods-brownfieldrn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brownfieldrn.release.xcconfig"; path = "Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD38043CAABBD15FB56CD64 /* libPods-brownfieldrn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				65D1B2552970580500DC3BA0 /* brownfieldrn */,
 				65D1B2542970580500DC3BA0 /* Products */,
+				C6F1F81E1C57BD05CFE72B8D /* Pods */,
+				D518130BA705A5A0E040CB22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = brownfieldrn;
 			sourceTree = "<group>";
 		};
+		C6F1F81E1C57BD05CFE72B8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75BD1E85CE6A04004C8ACD0B /* Pods-brownfieldrn.debug.xcconfig */,
+				E109402DC41E8DD5BD177AE6 /* Pods-brownfieldrn.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D518130BA705A5A0E040CB22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A234A4CC09B68C1DA17269DA /* libPods-brownfieldrn.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65D1B26C2970580500DC3BA0 /* Build configuration list for PBXNativeTarget "brownfieldrn" */;
 			buildPhases = (
+				2A3AAC8089968351681870E4 /* [CP] Check Pods Manifest.lock */,
 				65D1B24F2970580500DC3BA0 /* Sources */,
 				65D1B2502970580500DC3BA0 /* Frameworks */,
 				65D1B2512970580500DC3BA0 /* Resources */,
+				06CB7230C523D7F4E8164764 /* [CP] Embed Pods Frameworks */,
+				C72D321DCCFBD3C9F71B8C0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +169,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06CB7230C523D7F4E8164764 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A3AAC8089968351681870E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-brownfieldrn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C72D321DCCFBD3C9F71B8C0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		65D1B24F2970580500DC3BA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -181,7 +268,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -211,6 +298,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -229,6 +317,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -239,7 +328,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -269,6 +358,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -280,6 +370,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -287,6 +378,7 @@
 		};
 		65D1B26D2970580500DC3BA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75BD1E85CE6A04004C8ACD0B /* Pods-brownfieldrn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +405,7 @@
 		};
 		65D1B26E2970580500DC3BA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E109402DC41E8DD5BD177AE6 /* Pods-brownfieldrn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
