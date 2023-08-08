@@ -5,3 +5,7 @@ import App from './src/App'
 
 // ! this registered name is important here, will be used on the native side
 AppRegistry.registerComponent("RNSuperModule", () => App);
+
+// register FindPage here
+AppRegistry.registerComponent("FindPage", () => FindPage);
+

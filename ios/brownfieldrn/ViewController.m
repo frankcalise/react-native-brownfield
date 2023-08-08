@@ -25,6 +25,7 @@
     [button setFrame:CGRectMake(width/4, 200, width/2, 50)];
     
     [self.view addSubview:button];
+
 }
 
 - (void)handleButtonPress:(UIButton*)sender
@@ -38,27 +39,30 @@
     [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
                                 moduleName: @"RNSuperModule"
                          initialProperties:
-                             @{
-                                @"scores" : @[
-                                    @{
-                                        @"name" : @"Alex",
-                                        @"value": @"42"
-                                    },
-                                    @{
-                                        @"name" : @"Joel",
-                                        @"value": @"10"
-                                    }
-                                ]
-                            }
-                         launchOptions: nil];
+     @{
+        @"scores" : @[
+            @{
+                @"name" : @"Alex",
+                @"value": @"42"
+            },
+            @{
+                @"name" : @"Joel",
+                @"value": @"10"
+            }
+        ]
+    }
+                             launchOptions: nil];
     
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view = rootView;
-    vc.navigationItem.title = @"RN View (title from native)";
-    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissModal)];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-    navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:navigationController animated:YES completion:nil];
+//    UIViewController *vc = [[UIViewController alloc] init];
+//    vc.view = rootView;
+    self.view = rootView;
+//    [self presentViewController:vc animated:YES completion:nil];
+    //    vc.navigationItem.title = @"RN View (title from native)";
+    //    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissModal)];
+    //    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    //    navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
+    //    [self presentViewController:navigationController animated:YES completion:nil];
+    //}
 }
 
 - (void)dismissModal

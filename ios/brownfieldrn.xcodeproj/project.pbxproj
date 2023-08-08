@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FD38043CAABBD15FB56CD64 /* libPods-brownfieldrn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A234A4CC09B68C1DA17269DA /* libPods-brownfieldrn.a */; };
 		65D1B2582970580500DC3BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B2572970580500DC3BA0 /* AppDelegate.m */; };
 		65D1B25B2970580500DC3BA0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25A2970580500DC3BA0 /* SceneDelegate.m */; };
 		65D1B25E2970580500DC3BA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25D2970580500DC3BA0 /* ViewController.m */; };
@@ -31,7 +30,6 @@
 		65D1B2672970580500DC3BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D1B2682970580500DC3BA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75BD1E85CE6A04004C8ACD0B /* Pods-brownfieldrn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brownfieldrn.debug.xcconfig"; path = "Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn.debug.xcconfig"; sourceTree = "<group>"; };
-		A234A4CC09B68C1DA17269DA /* libPods-brownfieldrn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-brownfieldrn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E109402DC41E8DD5BD177AE6 /* Pods-brownfieldrn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brownfieldrn.release.xcconfig"; path = "Target Support Files/Pods-brownfieldrn/Pods-brownfieldrn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FD38043CAABBD15FB56CD64 /* libPods-brownfieldrn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,14 +86,12 @@
 				75BD1E85CE6A04004C8ACD0B /* Pods-brownfieldrn.debug.xcconfig */,
 				E109402DC41E8DD5BD177AE6 /* Pods-brownfieldrn.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D518130BA705A5A0E040CB22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A234A4CC09B68C1DA17269DA /* libPods-brownfieldrn.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
