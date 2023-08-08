@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65A7D10C2A8302AB00524680 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A7D10B2A8302AB00524680 /* SecondViewController.m */; };
 		65D1B2582970580500DC3BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B2572970580500DC3BA0 /* AppDelegate.m */; };
 		65D1B25B2970580500DC3BA0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25A2970580500DC3BA0 /* SceneDelegate.m */; };
 		65D1B25E2970580500DC3BA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25D2970580500DC3BA0 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65A7D10B2A8302AB00524680 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		65A7D10D2A8302F100524680 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		65D1B2532970580500DC3BA0 /* brownfieldrn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brownfieldrn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D1B2562970580500DC3BA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65D1B2572970580500DC3BA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 				65D1B2642970580500DC3BA0 /* LaunchScreen.storyboard */,
 				65D1B2672970580500DC3BA0 /* Info.plist */,
 				65D1B2682970580500DC3BA0 /* main.m */,
+				65A7D10B2A8302AB00524680 /* SecondViewController.m */,
+				65A7D10D2A8302F100524680 /* SecondViewController.h */,
 			);
 			path = brownfieldrn;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			files = (
 				65D1B25E2970580500DC3BA0 /* ViewController.m in Sources */,
 				65D1B2582970580500DC3BA0 /* AppDelegate.m in Sources */,
+				65A7D10C2A8302AB00524680 /* SecondViewController.m in Sources */,
 				65D1B2692970580500DC3BA0 /* main.m in Sources */,
 				65D1B25B2970580500DC3BA0 /* SceneDelegate.m in Sources */,
 			);

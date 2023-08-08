@@ -27,7 +27,7 @@ const $container: ViewStyle = {
   gap: 10,
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "#0000ff40",
+  backgroundColor: "#00ffff40",
 };
 
 const $row: ViewStyle = {
