@@ -4,12 +4,11 @@ import {
   createNativeStackNavigator,
 } from "@react-navigation/native-stack";
 import React from "react";
-import { Text, TextStyle, View, ViewStyle } from "react-native";
+import { Text, TouchableOpacity, TextStyle, View, ViewStyle } from "react-native";
 import { FindContentScreen, FindPageScreen } from "./FindPage";
 
 type ScreenProps = {
-  scores: {
-    name: string;
+  scores: { name: string;
     value: string;
   }[];
 };
@@ -29,8 +28,10 @@ const StackNavigator = createNativeStackNavigator<SuperModuleParamList>();
 
 const SuperModuleScreen = ({
   route,
+  navigation,
 }: NativeStackScreenProps<SuperModuleParamList, "SuperModule">) => {
   const { props } = route.params;
+  console.log(route);
   return (
     <View style={$container}>
       <View style={$row}>
@@ -39,6 +40,15 @@ const SuperModuleScreen = ({
         </View>
         <View style={$textArea}>
           <Text>two</Text>
+        </View>
+        <View style={$textArea}>
+          <Text>Find Page</Text>
+          <TouchableOpacity
+            style={$navLink}
+            onPress={() => navigation.navigate("FindContent")}
+          >
+            <Text>Go to content</Text>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={$textArea}>
@@ -95,4 +105,13 @@ const $text: TextStyle = {
 const $props: TextStyle = {
   marginTop: 10,
   color: "white",
+};
+
+const $navLink: ViewStyle = {
+  padding: 10,
+  backgroundColor: "#0000ff60",
+  borderRadius: 5,
+  borderWidth: 1,
+  borderColor: "#000000",
+  marginTop: 20,
 };
