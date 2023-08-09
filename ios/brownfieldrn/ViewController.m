@@ -36,10 +36,9 @@
 {
     NSLog(@"button tapped");
     
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    // AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     ReactViewController *reactViewController = [[ReactViewController alloc] initWithModuleName:@"RNSuperModule"
-        bridge:appDelegate.bridge
         initialProperties:@{
             @"initialRouteName": @"SuperModule",
             @"screenProps": @[
@@ -57,6 +56,25 @@
     }];
     [reactViewController.view setFrame:self.view.bounds];
     [self.view addSubview:reactViewController.view];
+    // ReactViewController *reactViewController = [[ReactViewController alloc] initWithModuleName:@"RNSuperModule"
+    //     bridge:appDelegate.bridge
+    //     initialProperties:@{
+    //         @"initialRouteName": @"SuperModule",
+    //         @"screenProps": @[
+    //             @{@"scores" : @[
+    //                 @{
+    //                     @"name" : @"Alex",
+    //                     @"value": @"42"
+    //                 },
+    //                 @{
+    //                     @"name" : @"Joel",
+    //                     @"value": @"10"
+    //                 }
+    //             ]
+    //         }]
+    // }];
+    // [reactViewController.view setFrame:self.view.bounds];
+    // [self.view addSubview:reactViewController.view];
 //        [self presentViewController: reactViewController animated:YES completion:nil];
 }
 

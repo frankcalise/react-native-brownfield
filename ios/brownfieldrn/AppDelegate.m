@@ -22,8 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.moduleName = @"RNSuperModule";
+    
+    [ReactViewController initializeBridge];
 
-    self.bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+//    self.bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
 //    self.reactNativeBridge = [[ReactNativeBridge alloc] init].bridge;
 
     return [super application:application didFinishLaunchingWithOptions:launchOptions];

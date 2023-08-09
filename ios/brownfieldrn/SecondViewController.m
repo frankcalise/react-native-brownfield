@@ -20,11 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    ReactViewController *reactViewController = [[ReactViewController alloc] initWithModuleName:@"RNSuperModule" bridge:appDelegate.bridge initialProperties:@{
+//    ReactViewController *reactViewController = [[ReactViewController alloc] initWithModuleName:@"RNSuperModule" bridge:appDelegate.bridge initialProperties:@{
+//        @"initialRouteName": @"FindPage"
+//        }];
+    ReactViewController *reactViewController = [[ReactViewController alloc] initWithModuleName:@"RNSuperModule" initialProperties:@{
         @"initialRouteName": @"FindPage"
         }];
+
     [reactViewController.view setFrame:self.view.bounds];
     [self.view addSubview:reactViewController.view];
 
