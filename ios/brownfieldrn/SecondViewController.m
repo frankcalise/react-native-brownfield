@@ -21,24 +21,12 @@
     // Do any additional setup after loading the view.
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
-                                moduleName: @"FindPage"
+                                moduleName: @"RNSuperModule"
                          initialProperties:
      @{
-        @"scores" : @[
-            @{
-                @"name" : @"Alex",
-                @"value": @"42"
-            },
-            @{
-                @"name" : @"Joel",
-                @"value": @"10"
-            }
-        ]
-    }
+        @"initialRouteName": @"FindPage"
+      }
                              launchOptions: nil];
-    
-//    UIViewController *vc = [[UIViewController alloc] init];
-//    vc.view = rootView;
     self.view = rootView;
 
 }

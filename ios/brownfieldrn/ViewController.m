@@ -40,16 +40,19 @@
                                 moduleName: @"RNSuperModule"
                          initialProperties:
      @{
-        @"scores" : @[
-            @{
-                @"name" : @"Alex",
-                @"value": @"42"
-            },
-            @{
-                @"name" : @"Joel",
-                @"value": @"10"
-            }
-        ]
+        @"initialRouteName": @"SuperModule",
+        @"screenProps": @[
+            @{@"scores" : @[
+                @{
+                    @"name" : @"Alex",
+                    @"value": @"42"
+                },
+                @{
+                    @"name" : @"Joel",
+                    @"value": @"10"
+                }
+            ]
+            }]
     }
                              launchOptions: nil];
     

@@ -7,4 +7,4 @@ import FindPage from "./src/FindPage";
 AppRegistry.registerComponent("RNSuperModule", () => App);
 
 // register FindPage here
-AppRegistry.registerComponent("FindPage", () => FindPage);
+// AppRegistry.registerComponent("FindPage", () => FindPage);
