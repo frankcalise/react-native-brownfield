@@ -6,6 +6,11 @@
 //
 
 #import "AppDelegate.h"
+#import "brownfieldrn-Bridging-Header.h"
+#import "brownfieldrn-Swift.h"
+#import <React/RCTBundleURLProvider.h>
+
+
 
 @interface AppDelegate ()
 
@@ -16,7 +21,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    return YES;
+    self.moduleName = @"RNSuperModule";
+
+    self.bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+//    self.reactNativeBridge = [[ReactNativeBridge alloc] init].bridge;
+
+    return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+{
+#if DEBUG
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+#else
+  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
 }
 
 

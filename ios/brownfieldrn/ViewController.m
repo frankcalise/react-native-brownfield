@@ -6,6 +6,10 @@
 //
 #import <React/RCTRootView.h>
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import "brownfieldrn-Bridging-Header.h"
+#import "brownfieldrn-Swift.h"
+
 
 
 @interface ViewController ()
@@ -32,40 +36,28 @@
 {
     NSLog(@"button tapped");
     
-    // TODO need a production main bundle here
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    RCTRootView *rootView =
-    [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
-                                moduleName: @"RNSuperModule"
-                         initialProperties:
-     @{
-        @"initialRouteName": @"SuperModule",
-        @"screenProps": @[
-            @{@"scores" : @[
-                @{
-                    @"name" : @"Alex",
-                    @"value": @"42"
-                },
-                @{
-                    @"name" : @"Joel",
-                    @"value": @"10"
-                }
-            ]
+    ReactViewController *reactViewController = [[ReactViewController alloc] initWithModuleName:@"RNSuperModule"
+        bridge:appDelegate.bridge
+        initialProperties:@{
+            @"initialRouteName": @"SuperModule",
+            @"screenProps": @[
+                @{@"scores" : @[
+                    @{
+                        @"name" : @"Alex",
+                        @"value": @"42"
+                    },
+                    @{
+                        @"name" : @"Joel",
+                        @"value": @"10"
+                    }
+                ]
             }]
-    }
-                             launchOptions: nil];
-    
-//    UIViewController *vc = [[UIViewController alloc] init];
-//    vc.view = rootView;
-    self.view = rootView;
-//    [self presentViewController:vc animated:YES completion:nil];
-    //    vc.navigationItem.title = @"RN View (title from native)";
-    //    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissModal)];
-    //    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-    //    navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
-    //    [self presentViewController:navigationController animated:YES completion:nil];
-    //}
+    }];
+    [reactViewController.view setFrame:self.view.bounds];
+    [self.view addSubview:reactViewController.view];
+//        [self presentViewController: reactViewController animated:YES completion:nil];
 }
 
 - (void)dismissModal

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65A7D10C2A8302AB00524680 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A7D10B2A8302AB00524680 /* SecondViewController.m */; };
+		65A7D1172A83414400524680 /* ReactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A7D1162A83414400524680 /* ReactViewController.swift */; };
 		65D1B2582970580500DC3BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B2572970580500DC3BA0 /* AppDelegate.m */; };
 		65D1B25B2970580500DC3BA0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25A2970580500DC3BA0 /* SceneDelegate.m */; };
 		65D1B25E2970580500DC3BA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B25D2970580500DC3BA0 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		65A7D10B2A8302AB00524680 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		65A7D10D2A8302F100524680 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		65A7D10E2A832FD300524680 /* brownfieldrn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "brownfieldrn-Bridging-Header.h"; sourceTree = "<group>"; };
+		65A7D1162A83414400524680 /* ReactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactViewController.swift; sourceTree = "<group>"; };
 		65D1B2532970580500DC3BA0 /* brownfieldrn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brownfieldrn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D1B2562970580500DC3BA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65D1B2572970580500DC3BA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 				65D1B2682970580500DC3BA0 /* main.m */,
 				65A7D10B2A8302AB00524680 /* SecondViewController.m */,
 				65A7D10D2A8302F100524680 /* SecondViewController.h */,
+				65A7D10E2A832FD300524680 /* brownfieldrn-Bridging-Header.h */,
+				65A7D1162A83414400524680 /* ReactViewController.swift */,
 			);
 			path = brownfieldrn;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				TargetAttributes = {
 					65D1B2522970580500DC3BA0 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D1B25E2970580500DC3BA0 /* ViewController.m in Sources */,
+				65A7D1172A83414400524680 /* ReactViewController.swift in Sources */,
 				65D1B2582970580500DC3BA0 /* AppDelegate.m in Sources */,
 				65A7D10C2A8302AB00524680 /* SecondViewController.m in Sources */,
 				65D1B2692970580500DC3BA0 /* main.m in Sources */,
@@ -383,8 +390,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = brownfieldrn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -400,6 +409,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frankcalise.brownfieldrn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "brownfieldrn/brownfieldrn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -410,8 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = brownfieldrn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -427,6 +441,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frankcalise.brownfieldrn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "brownfieldrn/brownfieldrn-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
